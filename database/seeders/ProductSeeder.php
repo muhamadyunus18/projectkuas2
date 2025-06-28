@@ -1,0 +1,188 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\Product;
+use App\Models\ProductVariation;
+
+class ProductSeeder extends Seeder
+{
+    public function run()
+    {
+        $products = [
+            [
+                'name' => 'Kawat Monel Premium',
+                'description' => 'Kawat monel premium untuk pembuatan cincin dan aksesoris berkualitas tinggi',
+                'price' => 50000,
+                'unit' => 'kg',
+                'category' => 'premium',
+                'stock' => 100,
+                'min_size' => 0.3,
+                'max_size' => 1.0,
+                'is_featured' => true,
+                'is_bestseller' => true,
+            ],
+            [
+                'name' => 'Kawat Kuningan',
+                'description' => 'Cocok untuk pembuatan aksesoris handmade dan kerajinan dengan tampilan mewah',
+                'price' => 45000,
+                'unit' => 'kg',
+                'category' => 'kawat',
+                'stock' => 150,
+                'min_size' => 0.3,
+                'max_size' => 1.0,
+            ],
+            [
+                'name' => 'Kawat Tembaga',
+                'description' => 'Ideal untuk filligri aksesoris dan tahan lama dengan warna khas',
+                'price' => 40000,
+                'unit' => 'kg',
+                'category' => 'kawat',
+                'stock' => 120,
+                'min_size' => 0.3,
+                'max_size' => 1.0,
+            ],
+            [
+                'name' => 'Kawat Nikel',
+                'description' => 'Kawat nikel berkualitas tinggi untuk kebutuhan industri dan kerajinan',
+                'price' => 85000,
+                'unit' => 'kg',
+                'category' => 'kawat',
+                'stock' => 80,
+                'min_size' => 0.3,
+                'max_size' => 2.0,
+            ],
+            [
+                'name' => 'Kawat Titanium',
+                'description' => 'Kawat titanium premium dengan ketahanan tinggi dan anti korosi',
+                'price' => 200000,
+                'unit' => 'kg',
+                'category' => 'premium',
+                'stock' => 50,
+                'min_size' => 0.3,
+                'max_size' => 2.0,
+                'is_featured' => true,
+            ],
+            [
+                'name' => 'Plat Monel Premium',
+                'description' => 'Plat monel premium untuk pembuatan cincin dan perhiasan',
+                'price' => 75000,
+                'unit' => 'lembar',
+                'category' => 'plat',
+                'stock' => 100,
+                'min_size' => 0.5,
+                'max_size' => 2.0,
+                'is_featured' => true,
+            ],
+            [
+                'name' => 'Plat Kuningan',
+                'description' => 'Plat kuningan berkualitas untuk kerajinan dan dekorasi',
+                'price' => 65000,
+                'unit' => 'lembar',
+                'category' => 'plat',
+                'stock' => 100,
+                'min_size' => 0.5,
+                'max_size' => 2.0,
+            ],
+            [
+                'name' => 'Plat Tembaga',
+                'description' => 'Plat tembaga berkualitas untuk kerajinan dan seni',
+                'price' => 60000,
+                'unit' => 'lembar',
+                'category' => 'plat',
+                'stock' => 100,
+                'min_size' => 0.5,
+                'max_size' => 2.0,
+            ],
+            [
+                'name' => 'Plat Perak 925',
+                'description' => 'Plat perak sterling 925 untuk pembuatan perhiasan',
+                'price' => 250000,
+                'unit' => 'lembar',
+                'category' => 'premium',
+                'stock' => 50,
+                'min_size' => 0.3,
+                'max_size' => 1.0,
+                'is_featured' => true,
+            ],
+            [
+                'name' => 'Plat Nikel',
+                'description' => 'Plat nikel berkualitas untuk kebutuhan industri',
+                'price' => 85000,
+                'unit' => 'lembar',
+                'category' => 'plat',
+                'stock' => 100,
+                'min_size' => 0.5,
+                'max_size' => 2.0,
+            ],
+            [
+                'name' => 'Plat Emas 18K',
+                'description' => 'Plat emas 18K untuk perhiasan mewah dan eksklusif',
+                'price' => 750000,
+                'unit' => 'lembar',
+                'category' => 'premium',
+                'stock' => 30,
+                'min_size' => 0.3,
+                'max_size' => 1.0,
+                'is_featured' => true,
+            ],
+            [
+                'name' => 'Plat Titanium',
+                'description' => 'Plat titanium premium dengan ketahanan tinggi dan anti korosi',
+                'price' => 300000,
+                'unit' => 'lembar',
+                'category' => 'premium',
+                'stock' => 50,
+                'min_size' => 0.5,
+                'max_size' => 2.0,
+            ],
+            [
+                'name' => 'Aksesoris Tambahan',
+                'description' => 'Berbagai aksesoris pendukung ring base, hook anting, pengunci gelang dll',
+                'price' => 25000,
+                'unit' => 'pcs',
+                'category' => 'aksesoris',
+                'stock' => 200,
+                'min_size' => 0.1,
+                'max_size' => 0.5,
+            ],
+            [
+                'name' => 'Kawat Stainless Steel',
+                'description' => 'Kawat stainless steel anti karat untuk penggunaan jangka panjang',
+                'price' => 55000,
+                'unit' => 'kg',
+                'category' => 'kawat',
+                'stock' => 150,
+                'min_size' => 0.3,
+                'max_size' => 2.0,
+            ],
+            [
+                'name' => 'Kawat Perak 925',
+                'description' => 'Kawat perak sterling 925 untuk perhiasan premium',
+                'price' => 150000,
+                'unit' => 'kg',
+                'category' => 'premium',
+                'stock' => 50,
+                'min_size' => 0.3,
+                'max_size' => 1.0,
+                'is_featured' => true,
+            ],
+            [
+                'name' => 'Kawat Emas 18K',
+                'description' => 'Kawat emas 18K untuk perhiasan mewah dan eksklusif',
+                'price' => 500000,
+                'unit' => 'kg',
+                'category' => 'premium',
+                'stock' => 30,
+                'min_size' => 0.3,
+                'max_size' => 1.0,
+                'is_featured' => true,
+            ],
+        ];
+
+        foreach ($products as $product) {
+            Product::create($product);
+        }
+    }
+} 
